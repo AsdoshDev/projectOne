@@ -22,7 +22,7 @@ define(['backbone','model_user'], function(Backbone) {
 
 
         url: function(){
-            return 'http://localhost:3000';
+            return 'https://localhost:3000';
         },
 
         // Fxn to update user attributes after recieving API response

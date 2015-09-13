@@ -16,7 +16,7 @@ define(['backbone','model_user'], function(Backbone) {
         },
 
         url: function(){
-            return 'http://localhost:8080/user';
+            return 'https://localhost:8080/user';
         }
     });
     return sandbox.models.User;
