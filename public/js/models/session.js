@@ -88,8 +88,6 @@ define(['backbone','model_user'], function(Backbone) {
 
                     if( !res.error ){
                         if(_.indexOf(['login', 'signup'], opts.method) !== -1){
-                                console.log("sucssres login");
-                            console.log(res);
                             self.updateSessionUser( res.user || {} );
                             self.set({ user_id: res.user.id, logged_in: true });
                         } else {
