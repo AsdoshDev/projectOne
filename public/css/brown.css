@@ -1,0 +1,31 @@
+.round,.row.header,.steps,button,.filterList,.Cube .cube-face,.toastMessage,.input__label--haruki::before, .input__label--haruki::after,#loginButton {
+background-color: #8c001a;
+}
+
+button:active,.toastMessage{
+box-shadow:0px 0px 3px 2px #8c001a;
+}
+
+ul.filterList:before{
+  border-bottom-color: #8c001a;
+}
+.filterList li:active{
+  color:#555;
+  background:#8c001a;
+}
+/*#8c001a  #555 #c296b6 */
+.count,.help{
+	color:#8c001a;
+}
+.toastMessage{
+	box-shadow: 0px 0px 15px -1px #8c001a;
+}
+.buttonActive{
+  color:#8c001a;
+  background:#fff;
+}
+
+button{
+	    outline: 1px solid #8c001a;
+}
+

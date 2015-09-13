@@ -1,0 +1,72 @@
+<script  id="defectsPage" type="text/template">
+<div class="filterOverlay"></div>
+<section class="table" id="table2excel">
+
+<section class="headerContainer">
+<section class="row header red">
+<div class="defectId">ID</div>
+<div class= "section">Module</div>
+<div tabindex="1" class= "cr">CR</div>
+<div class= "desc">Description</div>
+<div tabindex="2" class= "severity">Severity</div>
+<div tabindex="3" class= "env">ENV</div>
+<div tabindex="4" class= "status">Status</div>
+<div tabindex="5" class= "developer">Developer</div>
+<div class= "devComment">Dev Comments</div>
+<div class= "date">Logged By</div>
+
+</section>
+</section>
+<%if(defectsList){
+var length = defectsList.length;
+if(length > 0){%>
+<section class="defectContainer">
+<div class="defectScroller">
+<%for(var i=0;i<length;i++){
+var defect = defectsList[i];%>
+<section class="row defectRow" id="<%=defect._id%>">
+<div  class="defectId"><%=defect.defectId%></div>
+<div class="section"><%=defect.section%></div>
+<div class="cr"><%=defect.cr%></div>
+<div class= "desc">
+<div style="font-weight:bold"><%=defect.desc%></div>
+<div class= "stepsDesc">
+<%if(defect.steps && defect.steps.length >0){
+var stepLength =defect.steps.length; %>
+<%for(var j=0;j<stepLength;j++){%>
+<div><span style="font-weight:bold">Step <%=j+1%> :</span><span> <%=defect.steps[j]%></span></div> 
+<%}}%>
+</div>
+</div>
+<div class="severity"><%=defect.severity%></div>
+<div class="env"><%=defect.env%></div>
+<div class="status"><%=defect.status%></div>
+<div class="developer"><%=defect.developer%></div>
+<div class="devComment"><%=defect.devComment%></div>
+<div class= "date"><%=defect.loggedBy%></div>
+</section>
+<%}%>
+</section>
+</div>
+<%}}%>
+
+<div id="menuIcon"  title="Menu" class="round left close"></div>
+
+<div id="themeIcon" title="Change Theme" class="round left close"></div>
+<div id="exportTable" title="Export all Defects to Excel sheet" class="round left"></div>
+<div id="devList" data-modal="modal-19" title="Developer - CR List" class="round left md-trigger md-setperspective"></div>
+<div id="helpIcon" title="Help"  class="round center"></div>
+<div id="logout" title="Sign out" class="round left"></div>
+
+<div id="addDefect" title="Log new defect"  class="round right"></div>
+
+</section>
+
+<section  id="devCrList">
+
+<div class="devRow"></div>
+<div class="crRow"></div> 
+</section>
+
+</script>
+

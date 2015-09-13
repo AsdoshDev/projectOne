@@ -1,0 +1,89 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-arrow1 {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -5px;
+}
+
+.sprite-devlist {
+    width: 32px;
+    height: 32px;
+    background-position: -47px -5px;
+}
+
+.sprite-export {
+    width: 32px;
+    height: 32px;
+    background-position: -89px -5px;
+}
+
+.sprite-eyes {
+    width: 64px;
+    height: 64px;
+    background-position: -131px -5px;
+}
+
+.sprite-filter {
+    width: 48px;
+    height: 48px;
+    background-position: -5px -79px;
+}
+
+.sprite-help {
+    width: 32px;
+    height: 32px;
+    background-position: -63px -79px;
+}
+
+.sprite-logout {
+    width: 128px;
+    height: 128px;
+    background-position: -205px -5px;
+}
+
+.sprite-menu {
+    width: 32px;
+    height: 32px;
+    background-position: -5px -143px;
+}
+
+.sprite-minus {
+    width: 48px;
+    height: 48px;
+    background-position: -47px -143px;
+}
+
+.sprite-notick {
+    width: 24px;
+    height: 24px;
+    background-position: -343px -5px;
+}
+
+.sprite-plus {
+    width: 64px;
+    height: 64px;
+    background-position: -105px -143px;
+}
+
+.sprite-theme {
+    width: 32px;
+    height: 32px;
+    background-position: -179px -143px;
+}
+
+.sprite-tick {
+    width: 24px;
+    height: 24px;
+    background-position: -343px -39px;
+}
+
+.sprite-wine {
+    width: 64px;
+    height: 64px;
+    background-position: -221px -143px;
+}

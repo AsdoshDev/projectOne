@@ -1,0 +1,34 @@
+.round,.row.header,.steps,button,.filterList,.Cube .cube-face,.toastMessage,.input__label--haruki::before, .input__label--haruki::after,#loginButton{
+background-color: #ea6153;
+}
+
+button:active{
+box-shadow:0px 0px 3px 2px #ea6153;
+}
+
+ul.filterList:before{
+  border-bottom-color: #ea6153;
+}
+.count,.help{
+	color:crimson;
+}
+.buttonActive{
+  color:#ea6153;
+  background:#fff;
+}
+.toastMessage{
+	box-shadow: 0px 0px 15px -1px #ea6153;
+}
+
+.filterList li:active{
+  color:#555;
+  background:#ffb0ab;
+}
+button{
+	    outline: 1px solid #ea6153;
+}
+
+
+.bs{
+    box-shadow: 0px 0px 2px 2px #ea6153;
+}

@@ -1,0 +1,250 @@
+/* NEW DEFECT */
+
+@theme : #ea6153;
+form{
+	width:100%;
+}
+label{
+	display:block;
+	
+	margin-bottom:5px;
+}
+
+#defectLogger input,#defectLogger  select,#defectLogger  textarea{
+	 box-shadow: 0px 0px 3px 2px #ccc;	
+	 outline:none;
+
+}
+#defectLogger input:focus,#defectLogger select:focus,#defectLogger textarea:focus{
+	 box-shadow: 0px 0px 2px 1px #3399ff;	
+}
+select{
+	width:300px;
+	display:inline-block;
+	margin-bottom:10px;
+	padding:5px;
+	border:none;
+	/*box-shadow:0px 0px 1px #555;*/
+	 color: #666;
+	 cursor:pointer;
+
+}
+button{  
+  	border: 1px solid #fff;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    color:#fff;
+    display:inline-block;
+      font-size: 14px;
+}
+
+
+
+/*ALERT MESSAGE*/
+
+
+header{
+	padding:10px 20px;	
+	border-bottom:1px solid #777;
+}
+
+.message{
+padding:10px 20px;	
+}
+
+
+.overlay{
+	position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 1;
+    display: none;
+    width: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index:10;
+}
+
+.alertContainer{
+background:#e5e5e5;
+height:200px;
+width:350px;
+margin:0 auto;
+position:relative;
+box-shadow:0px 0px 1px #666;
+}
+
+.modalWindow{
+display: none;
+background:#e3e3e3;
+height:530px;
+width:730px;
+margin:0 auto;
+box-shadow:0px 0px 15px #333;
+position:absolute;
+ left: 50%;
+   top: 50%; 
+z-index:11;
+padding:0px 20px;
+margin-left: -365px;
+   margin-top: -265px;
+   color:#333;
+   border-radius: 10px;
+box-sizing:border-box;
+}
+
+/* footer for modal window */
+
+footer {
+	    border-top: 1px solid #777;
+    padding: 7px 0px;
+    position: absolute;
+    bottom: 5px;
+    width: 94%;
+}
+#cancelDefect{
+	margin-right:30px;
+}
+footer > .logButtons button{
+	width:100px;
+}
+footer > .logButtons{
+	float:right;
+}
+
+.footNote{
+	width: 60%;
+	font-size:12px;
+}
+textarea{
+	width:300px;
+	height:70px;
+	margin-bottom: 10px;
+	font-family:  Helvetica, Arial, sans-serif;
+	padding:5px;
+	resize:none;
+	border:none;
+}
+
+.column1{
+	float:left;
+	margin-left:2px;
+		
+}
+.column2{
+		float:right;
+	}
+
+#addDefectSection,#addStepsSection{
+	overflow:hidden;
+	height:100%;
+	padding:5px;
+}
+
+#addDefectSection h1{
+border-bottom: 1px solid #777;
+padding-bottom: 5px;
+}
+
+#addStepsSection{
+	display:none;
+
+}
+
+.scrollContainer{
+	height: 75%;
+  position: relative;
+  overflow: hidden;
+
+}
+
+#addStepsSection textarea{
+	height:auto;
+	width:82%;
+	float: left;
+	resize:none;
+	margin-left:5px;
+
+}
+
+ .steps{
+		margin:0px 0px 0px 20px;
+		width: 35px;
+	    height: 35px;
+	    position:relative;
+	    top:5px;
+    	float:left;
+    	background-repeat: no-repeat;
+    	background-position: center;
+    	
+}
+
+.steps.add{
+    background-image: url('../images/plus.png');
+    background-size: 15px;
+}
+.steps.delete{
+	    background-image: url('../images/minus.png');
+    background-size: 25px;
+    
+}
+.stepsHeader{
+	margin: 15px 0px;
+    border-bottom: 1px solid #666;
+    width: 100%;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 16px;
+    padding-bottom: 5px;
+}
+
+.back{
+	cursor: pointer;
+	width:10%;
+}
+.headerText{
+	width:90%;
+	display: inline-block;
+	text-align: center;
+}
+
+.stepContainer{
+	clear:both;
+	overflow:hidden;
+}
+
+
+
+
+@media screen and (max-width: 640px) { 
+/*.column1,.column2{
+	float:left;
+		
+}
+.column1{
+		width:100%;
+	}
+	.footNote{
+		display: none;
+	}
+	.modalWindow{
+display: none;
+background:#e3e3e3;
+height:530px;
+width:400px;
+margin:0 auto;
+box-shadow:0px 0px 15px #333;
+
+z-index:11;
+padding:0px 20px;
+margin-left: 200px;
+   margin-top: -265px;
+   color:#333;
+   border-radius: 10px;
+
+}
+*/
+}
+
+

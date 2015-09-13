@@ -1,0 +1,172 @@
+
+<script id="addDefectPage" type="text/template">
+<%var columns =  ['cr','section','developer','status','env','severity','desc','devComment','steps'];
+
+var length = columns.length;
+if(!model){
+	for(var i=0;i<length;i++){
+		window[columns[i]] = "";
+		// sort static data dropdowns
+		if(columns[i] != "desc" && columns[i] != "devComment" && columns[i] != "steps")
+		staticData[columns[i]].sort();
+	}
+}
+else{
+	for(var i=0;i<length;i++){
+		window[columns[i]] =  model[columns[i]] ? model[columns[i]] : "";
+		// sort static data dropdowns
+		if(columns[i] != "desc" && columns[i] != "devComment" && columns[i] != "steps")
+		staticData[columns[i]].sort();
+	}
+}%>
+<section id="addDefectSection">
+<h1>Log a Defect</h1>
+<section class="column1">
+
+<!--MODULE-->
+<label for="section">Section :</label>
+<select id ="section" name="section">
+<%staticData.section.sort();
+for(i=0;i<staticData.section.length;i++){
+if(staticData.section[i] === section){%>
+<option selected="selected" value="<%=staticData.section[i]%>"><%=staticData.section[i]%></option>
+<%}else{%>
+<option value="<%=staticData.section[i]%>"><%=staticData.section[i]%></option>
+<%}}%>
+</select>
+
+<!--CR-->
+<label for="cr">CR :</label>
+<select id ="cr" name="cr">
+<%for(i=0;i<staticData.cr.length;i++){
+if(staticData.cr[i] === cr){%>
+<option  selected="selected" value="<%=staticData.cr[i]%>"><%=staticData.cr[i]%></option>
+<%}else{%>
+<option value="<%=staticData.cr[i]%>"><%=staticData.cr[i]%></option>
+<%}}%>
+</select>
+
+
+<!--DEVELOPER-->
+<label for="developer">Developer* :</label>
+<select id ="developer" name="developer">
+<%for(i=0;i<staticData.developer.length;i++){
+if(staticData.developer[i] === developer){%>
+<option selected="selected"  value="<%=staticData.developer[i]%>"><%=staticData.developer[i]%></option>
+<%}else{%>
+<option value="<%=staticData.developer[i]%>"><%=staticData.developer[i]%></option>
+<%}}%>
+</select>
+
+
+<!--DESCRIPTION-->
+
+<label for="desc"> Description :</label>
+<textarea name="desc" id="desc" maxlength="2000" width="300"><%=desc%></textarea>
+
+
+<!--STEPS -->
+<label for="steps"> Steps (Optional):</label>
+<button id="steps" type="button">Click to Add / View steps</button>
+
+</section>
+<section class="column2">
+
+<!--SEVERITY-->
+<label for="severity">Severity :</label>
+<select id ="severity" name="severity">
+<%for(i=0;i<staticData.severity.length;i++){
+if(staticData.severity[i] === severity){%>
+<option selected="selected"  value="<%=staticData.severity[i]%>"><%=staticData.severity[i]%></option>
+<%}else{%>
+<option value="<%=staticData.severity[i]%>"><%=staticData.severity[i]%></option>
+<%}}%>
+</select>
+
+<!--ENV-->
+<label for="env">Enviroment :</label>
+<select id ="env" name="env">
+<%for(i=0;i<staticData.env.length;i++){
+if(staticData.env[i] === env){%>
+<option selected="selected"  value="<%=staticData.env[i]%>"><%=staticData.env[i]%></option>
+<%}else{%>
+<option value="<%=staticData.env[i]%>"><%=staticData.env[i]%></option>
+<%}}%>
+</select>
+
+<!--STATUS-->
+<label for="status">Status :</label>
+<select id ="status" name="status">
+<%for(i=0;i<staticData.status.length;i++){
+if(staticData.status[i] === status){%>
+<option selected="selected"  value="<%=staticData.status[i]%>"><%=staticData.status[i]%></option>
+<%}else{%>
+<option value="<%=staticData.status[i]%>"><%=staticData.status[i]%></option>
+<%}}%>
+</select>
+
+
+
+<!--DEV COMMENTS -->
+<label for="devComment"> Developer Comment :</label>
+<textarea name="devComment" id="devComment" maxlength="2000" width="100"><%=devComment%></textarea>
+
+
+</section>
+<footer>
+<div class ="logButtons">
+<button id="cancelDefect" type="button" >Cancel</button>
+<%if(model){%>
+<button id="submit" type="submit">Update</button>
+<%}else{%>
+<button id="update" type="submit">Add</button>
+<%}%>
+
+</div>
+<div class="footNote"> *Select the right developer for the defect logged, as the developer will be notified of the defect through email<div>
+</footer>
+</section>
+<section id="addStepsSection">
+<div class="stepsHeader">
+<span class="back">Back</span>
+<div class="headerText">Add Steps</div>
+</div>
+<div class="scrollContainer">
+<div class="stepScroll">
+
+<!--STEPS -->
+<%if(model === "" || model === undefined || model.steps.length === 0){%>
+<div class="stepContainer">
+<label for="step1"> Step 1 :</label>
+<textarea name="steps" class="stepTextarea" id="step1"  maxlength="2000" width="300"></textarea>
+<button type="button" class="steps add"></button>
+</div>
+<%}else{%>
+<%for(i=0;i<model.steps.length;i++){%>
+<div class="stepContainer">	
+<label for='step<%=i+1%>'> Step <%=i+1%> :</label>
+<textarea name="steps" class="stepTextarea" id='step<%=i+1%>' maxlength="2000" width="300"><%=model.steps[i]%></textarea>
+<%if(i === model.steps.length-1){%>
+<button type="button" class="steps add"></button>
+<%if(model.steps.length > 1){%>  
+<button type="button" class="steps delete"></button></div>
+<%}}%>
+</div>
+<%}}%>
+
+</div>
+</div>
+<footer>
+<div class ="logButtons">
+<button id="cancelDefect" type="button" >Cancel</button>
+<%if(model){%>
+<button id="submit" type="submit">Update</button>
+<%}else{%>
+<button id="update" type="submit">Add</button>
+<%}%>
+</div>
+<!--<div class="footNote"> *Select the right developer for the defect, as the developer will be notified of the defect through email<div>-->
+</footer>
+</section>
+
+</script>
