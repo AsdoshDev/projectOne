@@ -21,11 +21,13 @@ fs = require('fs');
 /**
  * Get port from environment and store in Express.
  */
-var server = http.createServer(/*sslOptions,*/app).listen('3000', function(){
-  console.log("Secure Express server listening on port 3000");
+
+
+var server = http.createServer(/*sslOptions,*/app).listen(process.env.PORT, function(){
+  console.log("Listening to server on "+ process.env.PORT);
 });
 
-var port = normalizePort(process.env.PORT || '3000');
+var port = normalizePort(process.env.PORT);
 app.set('port', port);
 
 /**
