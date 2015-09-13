@@ -38,10 +38,8 @@ require(
   ["jquery","underscore","backbone","view_login"],
 
   function($, _, B, LoginView) {
-//  sandbox.defects = new sandbox.collections.DefectsCollection();
     $(function() {
       $('body').append('<section class="login"></section>');
       new LoginView({});
     });
-}
-);
+});
