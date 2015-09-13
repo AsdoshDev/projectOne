@@ -1,6 +1,8 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-mongoose.connect('mongodb://localhost/restapi');
+uri  = 'mongodb://mdbuser:mdbpassword@ds031978.mongolab.com:31978/restapi';
+local = 'mongodb://localhost/restapi';
+mongoose.connect(uri);
 //To render home page
 
 var DefectSchema =  new mongoose.Schema({

@@ -61,6 +61,7 @@ define(['underscore','backbone','jquery',
               $.when(this.collection.fetch())
                 .done(function () {
                 _thisView.render();
+                $('#loaderOverlay,.loader').fadeOut();
               });
         },
         changeTheme : function(e){
@@ -242,7 +243,7 @@ define(['underscore','backbone','jquery',
                      sandbox.firstTime = true;   
                     }
                
-                   $('#loaderOverlay,.loader').fadeOut();
+              
               //  socket.on('new_defect', function (data) {
               //    console.log("New defect Logged ..Server just told me!!");
               // });
