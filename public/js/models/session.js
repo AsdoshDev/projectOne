@@ -22,7 +22,8 @@ define(['backbone','model_user'], function(Backbone) {
 
 
         url: function(){
-            return 'http://localhost:3000';
+            return 'http://simple-napp.herokuapp.com';
+            
         },
 
         // Fxn to update user attributes after recieving API response

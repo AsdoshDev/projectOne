@@ -3,7 +3,7 @@ var sandbox = sandbox || {};
 sandbox.models ={};
         define(['backbone'], function(Backbone) {
         sandbox.models.Defect = Backbone.Model.extend({
-            urlRoot : 'http://localhost:3000/defects',
+            urlRoot : 'http://simple-napp.herokuapp.com/defects',
         defaults : {
             section:"",
             cr:"",
