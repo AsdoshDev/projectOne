@@ -62,6 +62,11 @@ define(['underscore','backbone','jquery',
                 .done(function () {
                 _thisView.render();
                 $('#loaderOverlay,.loader').fadeOut();
+                var currentUser = sandbox.user.toJSON().name;
+                    if(!sandbox.firstTime){
+                    $('.toastMessage').text("Hey "+ currentUser + "! Wassup Yo!").fadeIn(400).delay(2000).fadeOut(400);
+                     sandbox.firstTime = true;   
+                    }
               });
         },
         changeTheme : function(e){
@@ -237,11 +242,7 @@ define(['underscore','backbone','jquery',
                          $('#'+sandbox.updatedId).next().find('>div').removeClass('fadeShadow');
                       },3500);
                     }
-                    var currentUser = sandbox.user.toJSON().name;
-                    if(!sandbox.firstTime){
-                    $('.toastMessage').text("Hey "+ currentUser + "! Wassup Yo!").fadeIn(400).delay(2000).fadeOut(400);
-                     sandbox.firstTime = true;   
-                    }
+                    
                
               
               //  socket.on('new_defect', function (data) {
