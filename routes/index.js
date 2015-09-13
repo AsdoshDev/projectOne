@@ -239,7 +239,7 @@ function sendEmail(from,to,doc){
 		to: "",
 		from: from,
 		subject: 'Defect Logger - '+ doc.cr + ' - '+ doc.desc ,
-		html: '<div>Hey ' +doc.developer + ' !</div> \n <div> A defect has been logged : </div>\n'+
+		html: '<div>Hey ' +doc.developer + ' !</div> \n <div> A defect has been logged in your name : </div>\n'+
 		'<div><span style="font-weight:bold;">Section : </span>' + doc.section + '</div>\n'+
 		'<div><span style="font-weight:bold;">CR : </span>' + doc.cr + '</div>\n'+
 		'<div><span style="font-weight:bold;">Description : </span>' + doc.desc + '</div>\n'+
