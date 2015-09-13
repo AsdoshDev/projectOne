@@ -1,6 +1,6 @@
 var restful = require('node-restful');
 var mongoose = restful.mongoose;
-uri  = 'mongodb://mdbuser:mdbpassword@ds031978.mongolab.com:31978/restapi';
+uri  = process.env.MONGOLAB_URI;
 local = 'mongodb://localhost/restapi';
 mongoose.connect(uri);
 //To render home page
