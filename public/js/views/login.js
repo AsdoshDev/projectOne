@@ -51,8 +51,6 @@ define(['backbone','text!/templates/login.html','model_session',"view_defect"],
                 }, {
                     success: function(mod, res){
                         //if(DEBUG) console.log("SUCCESS", mod, res);
-                        debugger;
-                        console.log(res);
                         self.destroyView();  
                         $('body').append('<section id="defectLogger"></section>');
                         new sandbox.views.DefectsView({

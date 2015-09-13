@@ -87,7 +87,6 @@ define(['underscore','backbone','jquery','text!/templates/logDefect.html'], func
             var self = this;
             $('#addDefectSection').fadeOut('fast',function(){
                 $('#addStepsSection').fadeIn('fast',function(){
-                    debugger;
                      self.defectScroll.refresh();
                   $('.stepTextarea:first').focus();  
                 });

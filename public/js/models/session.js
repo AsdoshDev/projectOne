@@ -28,7 +28,6 @@ define(['backbone','model_user'], function(Backbone) {
 
         // Fxn to update user attributes after recieving API response
         updateSessionUser: function( userData ){
-            debugger;
             this.user.set( _.pick( userData, _.keys(this.user.defaults) ) );
         },
 
@@ -40,8 +39,7 @@ define(['backbone','model_user'], function(Backbone) {
          * and return a user object if authenticated
          */
          checkAuth: function(callback, args) {
-         	debugger;
-             var self = this;
+         	 var self = this;
              this.fetch({                                //Check if there are tokens in localstorage
                  success: function(mod, res){
                      if(!res.error && res.user){

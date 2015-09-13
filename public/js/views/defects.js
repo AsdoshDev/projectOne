@@ -233,7 +233,6 @@ define(['underscore','backbone','jquery',
                       $('.dragging').bind('click',function (e) {
                               e.preventDefault();
                        });
-                      debugger;
                        if(sandbox.updatedId){
                       $('#'+sandbox.updatedId +">div").addClass('fadeShadow');
                        $('#'+sandbox.updatedId).next().find('>div').addClass('fadeShadow');
