@@ -122,7 +122,7 @@ var Defect = require('../schemas/defectSchema');
 router.get('/defects', function(req, res, next) { 
   Defect.find(function(err,docs){
   	// res.header("Access-Control-Allow-Origin", "*");
-  	console.log(docs);
+  //	console.log(docs);
 	res.send(docs);
 
     // docs.forEach(function(item){

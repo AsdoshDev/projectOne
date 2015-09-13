@@ -34,7 +34,7 @@ var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
-//app.set('view engine', 'ejs');
+app.set('view engine', 'ejs');
 //app.locals.pageTitle = "Defect Logger";
 // will go through all the custom routes first
 // and then go to public directory and override it
