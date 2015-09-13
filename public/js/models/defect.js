@@ -3,7 +3,7 @@ var sandbox = sandbox || {};
 sandbox.models ={};
         define(['backbone'], function(Backbone) {
         sandbox.models.Defect = Backbone.Model.extend({
-            urlRoot : 'https://localhost:3000/defects',
+            urlRoot : 'http://localhost:3000/defects',
         defaults : {
             section:"",
             cr:"",

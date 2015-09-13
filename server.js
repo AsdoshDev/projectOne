@@ -8,22 +8,22 @@ var app = require('./app');
 var debug = require('debug')('projectOne:server');
 var http = require('http');
 
-var https = require('https');
+// var https = require('https');
 console.log("------------------STARTING PLACE - WWW------------------");
 fs = require('fs');
-var sslOptions = {
-  key: fs.readFileSync('ssl/server.key'),
-  cert: fs.readFileSync('ssl/server.crt'),
-  ca: fs.readFileSync('ssl/ca.crt'),
-  requestCert: true,
-  rejectUnauthorized: false
-};
+// var sslOptions = {
+//   key: fs.readFileSync('ssl/server.key'),
+//   cert: fs.readFileSync('ssl/server.crt'),
+//   ca: fs.readFileSync('ssl/ca.crt'),
+//   requestCert: true,
+//   rejectUnauthorized: false
+// };
 /**
  * Get port from environment and store in Express.
  */
 
 
-var server = https.createServer(sslOptions,app).listen(process.env.PORT, function(){
+var server = http.createServer(/*sslOptions,*/app).listen(process.env.PORT, function(){
   console.log("Listening to server on "+ process.env.PORT);
 });
 
