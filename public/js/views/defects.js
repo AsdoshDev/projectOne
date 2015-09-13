@@ -64,7 +64,7 @@ define(['underscore','backbone','jquery',
                 $('#loaderOverlay,.loader').fadeOut();
                 var currentUser = sandbox.user.toJSON().name;
                     if(!sandbox.firstTime){
-                    $('.toastMessage').text("Hey "+ currentUser + "! Wassup Yo!").fadeIn(400).delay(2000).fadeOut(400);
+                    $('.toastMessage').text("Hey "+ currentUser + "! :)").fadeIn(400).delay(2000).fadeOut(400);
                      sandbox.firstTime = true;   
                     }
               });
