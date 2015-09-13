@@ -247,7 +247,7 @@ function sendEmail(from,to,doc){
 		'<div><span style="font-weight:bold;">Environment : </span>' + doc.env + '</div>\n'+
 		'\n'+
 		'<div>Acknowledge the defect by moving the status to AIP/WIP in http://cpb-dl.herokuapp.com</div>\n'+
-		'<div>-------------------DEFECT LOGGER IS BEING TESTED - PLEASE BARE WITH US-------------------</div>\n'
+		'<div>---DEFECT LOGGER IS BEING TESTED - PLEASE BARE WITH US---</div>\n'
 	});
     // Adding separately to include an array of email Id's
 	emailDetails.addTo(to);
