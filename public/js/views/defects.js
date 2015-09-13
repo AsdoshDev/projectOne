@@ -26,7 +26,7 @@ define(['underscore','backbone','jquery',
         },
         devCrList :  {
             "Karthik" : ["Employment","Optional ID Records","Multiple Inheritance","Address Proof and Exception Docs","GFCID"],
-            "Satya" : ["Public Figure Status" ,"CRF Summary","Legacy Docs","Financial Documents","LOV Cleanup"],
+            "Satya" : ["CRF Summary","Legacy Docs","Financial Documents","LOV Cleanup"],
             "Jugal" : ["Tabular View - Associated Members","Swiss Visibility - RB"],
             "Ranjith" : ["Public Figure Status","SPF Declassification","QA Research","Swiss Visibility - Profile Manager"],
             "Indu" : ["LFG","Assets Held Outside Citigroup","Maker Checker Changes"],
@@ -38,7 +38,7 @@ define(['underscore','backbone','jquery',
 
           openDevCRList : function(){
               $('.round,.header').css('pointer-events','none');
-             var devArray = ["Karthik","Satya", "Jugal","Ranjith", "Indu", "Ratna","Ramprasad", "Shashank", "Rajesh"];
+             var devArray = ["Indu","Jugal","Karthik", "Ranjith", "Ratna","Ramprasad", "Rajesh","Satya", "Shashank"];
                      for(var i=0;i<devArray.length;i++){
                        $('#devCrList').append("<div class='fullRow'><div class='halfRow'>"+devArray[i]+"</div><div class='halfRow'>"+this.devCrList[devArray[i]]+"</div></div>")
                      }
