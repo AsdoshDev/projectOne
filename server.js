@@ -12,9 +12,9 @@ var https = require('https');
 console.log("------------------STARTING PLACE - WWW------------------");
 fs = require('fs');
 var sslOptions = {
-  key: fs.readFileSync('./ssl/server.key'),
-  cert: fs.readFileSync('./ssl/server.crt'),
-  ca: fs.readFileSync('./ssl/ca.crt'),
+  key: fs.readFileSync('ssl/server.key'),
+  cert: fs.readFileSync('ssl/server.crt'),
+  ca: fs.readFileSync('ssl/ca.crt'),
   requestCert: true,
   rejectUnauthorized: false
 };
