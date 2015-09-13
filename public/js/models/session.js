@@ -22,7 +22,7 @@ define(['backbone','model_user'], function(Backbone) {
 
 
         url: function(){
-            return 'http://simple-napp.herokuapp.com';
+            return 'http://cpb-dl.herokuapp.com';
             
         },
 

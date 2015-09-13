@@ -4,7 +4,7 @@ sandbox.collections = {};
 
 define(['backbone'], function(Backbone) {
     sandbox.collections.DefectsCollection = Backbone.Collection.extend({
-    	url : 'http://simple-napp.herokuapp.com/defects',
+    	url : 'http://cpb-dl.herokuapp.com/defects',
         model : sandbox.models.Defect,
         initialize: function() {
    

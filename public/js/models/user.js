@@ -16,7 +16,7 @@ define(['backbone','model_user'], function(Backbone) {
         },
 
         url: function(){
-            return 'http://simple-napp.herokuapp.com/user';
+            return 'http://cpb-dl.herokuapp.com/user';
         }
     });
     return sandbox.models.User;
