@@ -4,7 +4,7 @@ sandbox.collections = {};
 
 define(['backbone'], function(Backbone) {
     sandbox.collections.DefectsCollection = Backbone.Collection.extend({
-    	url : 'https://localhost:3000/defects',
+    	url : 'http://localhost:3000/defects',
         model : sandbox.models.Defect,
         initialize: function() {
    
