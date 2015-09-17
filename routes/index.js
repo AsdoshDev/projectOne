@@ -1,7 +1,7 @@
 //Dependencies
 var express = require('express');
 var router = express.Router();
-var sendgrid = require('sendgrid')('KarthikDev','Sendgrid@2015');
+var sendgrid = require('sendgrid')(SNAME,SGATEWAY);
 //var json = require('../users.json');
 var User = require('../schemas/userSchema');
 var session = require('client-sessions');
@@ -297,15 +297,12 @@ router.post('/defects',function(req,res){
 					var data = retrieveEmail(doc);
 					// data.isAuthorized is set by the service being invoked
                     callback(false, data);
-                
-				    } ],
+                	}],
 				    function(err, results) {
 				        console.log(results);
 				        // correctly gets invoked after async call completes
 				        // but res.json isn't sending anything to the client
 				   		res.json(doc);	
-				    	
-				        
 				    });
 			}
 		}); 
