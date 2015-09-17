@@ -1,7 +1,7 @@
 //Dependencies
 var express = require('express');
 var router = express.Router();
-var sendgrid = require('sendgrid')(SNAME,SGATEWAY);
+var sendgrid = require('sendgrid')(process.env.SNAME,process.env.SGATEWAY);
 //var json = require('../users.json');
 var User = require('../schemas/userSchema');
 var session = require('client-sessions');
