@@ -70,7 +70,7 @@ define(['underscore','backbone','jquery',
               });
         },
         changeTheme : function(e){
-            $( ".header .cr" ).trigger( "click" );
+            $( ".header .section" ).trigger( "click" );
             if(!$('.overlay').is(':visible'))
             this.showHelp();
             var target = e.target;
