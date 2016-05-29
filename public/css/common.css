@@ -18,7 +18,7 @@ letter-spacing:0.5px;
 .cpb-dl-logout, .cpb-dl-eyes, .cpb-dl-plus, .cpb-dl-wine, .cpb-dl-filter, 
 .cpb-dl-minus, .cpb-dl-arrow1, .cpb-dl-devlist, .cpb-dl-export, .cpb-dl-help, 
 .cpb-dl-menu, .cpb-dl-theme, .cpb-dl-notick, .cpb-dl-tick
-{ max-width: 100%; background-size: 100%; background-image: url('png.png'); }
+{ max-width: 100%; background-size: 100%; background-image: url('spritesheet.png'); }
  
 .cpb-dl-logout { background-position: 0 0%; background-size: 100%; }
 .cpb-dl-eyes { background-position: 0 17.370892%; background-size: 200%; }
