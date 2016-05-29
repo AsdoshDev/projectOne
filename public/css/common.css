@@ -14,6 +14,29 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f6f6', end
 letter-spacing:0.5px;
 }
 
+.cpb-dl-logout, .cpb-dl-eyes, .cpb-dl-plus, .cpb-dl-wine, .cpb-dl-filter, 
+.cpb-dl-minus, .cpb-dl-arrow1, .cpb-dl-devlist, .cpb-dl-export, .cpb-dl-help, 
+.cpb-dl-menu, .cpb-dl-theme, .cpb-dl-notick, .cpb-dl-tick
+{ max-width: 100%; background-size: 100%; background-image: url('../images/spritesheet.png'); }
+ 
+.cpb-dl-logout { background-position: 0 0%; background-size: 100%; }
+.cpb-dl-eyes { background-position: 0 19.113573%; background-size: 200%; }
+.cpb-dl-plus { background-position: 0 29.362881%; background-size: 200%; }
+.cpb-dl-wine { background-position: 0 39.612188%; background-size: 200%; }
+.cpb-dl-filter { background-position: 0 48.780488%; background-size: 266.666667%; }
+.cpb-dl-minus { background-position: 0 56.639566%; background-size: 266.666667%; }
+.cpb-dl-arrow1 { background-position: 0 63.129973%; background-size: 400%; }
+.cpb-dl-devlist { background-position: 0 68.700265%; background-size: 400%; }
+.cpb-dl-export { background-position: 0 74.270557%; background-size: 400%; }
+.cpb-dl-help { background-position: 0 79.840849%; background-size: 400%; }
+.cpb-dl-menu { background-position: 0 85.411141%; background-size: 400%; }
+.cpb-dl-theme { background-position: 0 90.981432%; background-size: 400%; }
+.cpb-dl-notick { background-position: 0 95.538058%; background-size: 533.333333%; }
+.cpb-dl-tick { background-position: 0 100%; background-size: 533.333333%; }
+
+
+
+
 .eyes{
     background-image: url('../images/eyes.png');
     background-size: 15px;
