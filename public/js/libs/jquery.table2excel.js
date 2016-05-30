@@ -44,7 +44,7 @@
             // get contents of table except for exclude
             $(e.element).each( function(i,o) {
                 var tempRows = "";
-                $(o).find(".row").not(e.settings.exclude).each(function (i,o) {
+                $(o).find(".row:visible").not(e.settings.exclude).each(function (i,o) {
                     var tempfields = "";
                         $(o).find('>div').each(function(index,element){
                             if($(o).hasClass('header')){
