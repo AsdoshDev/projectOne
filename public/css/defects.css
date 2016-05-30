@@ -150,6 +150,7 @@ padding:10px;
 	vertical-align:middle;
 	border-right:1px solid #ddd;
   font-size:14px;
+  box-sizing:border-box;
 }
 
 .row.header > div{
@@ -168,7 +169,9 @@ width:10%;
 
 }
 
-
+.desc{
+	width:20%;
+}
 
 .header>div:active{
   box-shadow:0px 0px 5px 1px #ea6153;
