@@ -142,8 +142,6 @@ overflow: hidden;
     user-select: none;
     display: block;
     border:1px solid #fff;
-        display: flex;
-     display: -webkit-flex;
 }
 .defectRow > div{
 width:10%;
@@ -156,8 +154,8 @@ padding:10px;
 }
 
 .row.header > div{
--webkit-flex-grow: 1;
-    flex-grow: 1;
+width:10%;
+  display:inline-block;
   padding:10px 0px;
   text-align:center;
   vertical-align:middle;
