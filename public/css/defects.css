@@ -168,10 +168,10 @@ width:10%;
 
 
 }
-
-.defectRow > div.desc{
+.row.header > div.desc,.defectRow > div.desc{
 	width:20%;
 }
+
 
 .header>div:active{
   box-shadow:0px 0px 5px 1px #ea6153;
