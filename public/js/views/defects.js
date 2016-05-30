@@ -145,6 +145,7 @@ define(['underscore','backbone','jquery',
         }
         },
         editDefect : function(e){
+          if(this.scroll && this.scroll.moved ) e.preventDefault();
             $('.header,.round').css('pointer-events','none');
             var targetIndex = $(e.currentTarget).index();
             var targetModel = sandbox.defects.at(targetIndex);
